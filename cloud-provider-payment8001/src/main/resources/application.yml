@@ -4,13 +4,13 @@ server:
 spring:
   application:
     name: cloud-payment-service
-
-datasource:
-  type: com.alibaba.druid.pool.DruidDataSource   #当前数据源操作类型
-  driver-class-name: org.gjt.mm.mysql.Driver     #mysql驱动包
-  url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&charaterEncoding=utf-8&useSSL=false
-  username: root
-  password: root
+#这个地方刚开始顶格写了，报这个错误：Failed to determine a suitable driver class  解决方案  yml格式文件的写入 要求严格 （等阶平齐）
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
