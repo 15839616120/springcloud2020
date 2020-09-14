@@ -1,0 +1,29 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: cloud-payment-service
+#这个地方刚开始顶格写了，报这个错误：Failed to determine a suitable driver class  解决方案  yml格式文件的写入 ：（等阶平齐）
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.springcloud.entities    #所有entity别名类所在包
+
+eureka:
+  client:
+    register-with-eureka: true  #表示是否将自己注册进eurekaServer，默认为true
+    fetch-registry: true        #是否从eurekaServer中抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka #集群版
+
+  instance:
+    instance-id: payment8002  #微服务主机名称的规范
+    perfer-ip-address: true   #访问路径可以显示ip地址
