@@ -17,4 +17,5 @@ public class CommonResult<T> {
         this(code,message,null);
     }
 
+
 }
