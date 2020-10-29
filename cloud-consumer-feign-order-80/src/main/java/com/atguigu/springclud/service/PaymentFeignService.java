@@ -13,4 +13,11 @@ public interface PaymentFeignService {
 
     @GetMapping(value = "/payment/getPaymentById/{id}")
     CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+
+    /**
+     * 测试openfeign超时控制
+     * @return
+     */
+    @GetMapping("/payment/paymentFeignTimeout")
+    String paymentFeignTimeout();
 }
