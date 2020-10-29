@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Component
-@FeignClient(value = "cloud-payment-service")
+@FeignClient(value = "CLOUD-PAYMENT-SERVICE")
 public interface PaymentFeignService {
 
     @GetMapping(value = "/payment/getPaymentById/{id}")
