@@ -8,5 +8,5 @@ eureka:
     register-with-eureka: false   #false表示不向注册中心注册自己
     fetch-register: false         #false 表示自己端就是注册中心，我们的职责就是维护服务实例，并不需要检索服务
     service-url:
-      defaultZone: http://eureka7002.com:7002/eureka/
-      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址【eureka的服务地址】  互相注册，相互守望。
+      #defaultZone: http://eureka7002.com:7002/eureka/ #集群指向其他的eureka   互相注册，相互守望。
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址【eureka的服务地址】
