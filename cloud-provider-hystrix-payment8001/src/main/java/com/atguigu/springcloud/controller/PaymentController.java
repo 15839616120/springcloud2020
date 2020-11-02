@@ -16,7 +16,7 @@ public class PaymentController {
 
     @Resource
     private PaymentService paymentService;
-    @Value("${server.port0} ")
+    @Value("${server.port} ")
     private String serverPort;
 
     @GetMapping("/payment/hystrix/ok/{id}")

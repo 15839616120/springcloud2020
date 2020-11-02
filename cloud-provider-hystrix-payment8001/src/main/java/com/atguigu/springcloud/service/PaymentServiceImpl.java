@@ -13,6 +13,7 @@ public class PaymentServiceImpl implements PaymentService {
      * @param id
      * @return
      */
+    @Override
     public String paymentInfo(Integer id) {
         return "线程池： " + Thread.currentThread().getName() + "  paymentInfo,id: " + id + "\t" + "O(∩_∩)O哈哈~";
     }
@@ -22,6 +23,7 @@ public class PaymentServiceImpl implements PaymentService {
      * @param id
      * @return
      */
+    @Override
     public String paymentInfoError(Integer id) {
         try {
             TimeUnit.SECONDS.sleep(3);
