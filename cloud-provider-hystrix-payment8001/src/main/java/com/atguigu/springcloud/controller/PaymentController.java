@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ * @author wuyz1
+ */
 @RestController
 @Slf4j
 public class PaymentController {
