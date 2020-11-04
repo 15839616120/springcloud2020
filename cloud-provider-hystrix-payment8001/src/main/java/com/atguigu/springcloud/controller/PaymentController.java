@@ -22,6 +22,11 @@ public class PaymentController {
     @Value("${server.port} ")
     private String serverPort;
 
+    /**
+     * http://localhost:8001/payment/hystrix/ok/1
+     * @param id
+     * @return
+     */
     @GetMapping("/payment/hystrix/ok/{id}")
     public String paymentInfo(@PathVariable("id") Integer id){
         String result = paymentService.paymentInfo(id);
@@ -29,6 +34,11 @@ public class PaymentController {
         return result;
     }
 
+    /**
+     * http://localhost:8001/payment/hystrix/error/1
+     * @param id
+     * @return
+     */
     @GetMapping("/payment/hystrix/error/{id}")
     public String paymentInfoError(@PathVariable("id") Integer id){
         String result = paymentService.paymentInfoError(id);
