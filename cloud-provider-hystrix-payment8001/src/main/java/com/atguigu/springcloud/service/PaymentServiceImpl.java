@@ -15,7 +15,7 @@ public class PaymentServiceImpl implements PaymentService {
      */
     @Override
     public String paymentInfo(Integer id) {
-        return "线程池： " + Thread.currentThread().getName() + "  paymentInfo,id: " + id + "\t" + "O(∩_∩)O哈哈~";
+        return "线程池： " + Thread.currentThread().getName() + "  paymentInfoOk,id: " + id + "\t" + "O(∩_∩)O哈哈~";
     }
 
     /**
