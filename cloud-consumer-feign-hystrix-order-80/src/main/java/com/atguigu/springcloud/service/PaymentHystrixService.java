@@ -7,13 +7,29 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+/**
+ * @author wuyz1
+ */
 @Component
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
+@FeignClient(value = "cloud-provider-hystrix-payment")
 public interface PaymentHystrixService {
 
-    @GetMapping(value = "/payment/hystrix/ok/{id}")
-    String paymentInfo(Integer id);
 
+    /**
+     * 正常访问ok的方法
+     * @param id
+     * @return
+     * @PathVariable 这个注解刚开始忘记加了，报了404错误
+     */
+    @GetMapping(value = "/payment/hystrix/ok/{id}")
+    String paymentInfo(@PathVariable("id") Integer id);
+
+
+    /**
+     * 模拟超时异常
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/payment/hystrix/error/{id}")
-    String paymentInfoError(Integer id);
+    String paymentInfoError(@PathVariable("id") Integer id);
 }

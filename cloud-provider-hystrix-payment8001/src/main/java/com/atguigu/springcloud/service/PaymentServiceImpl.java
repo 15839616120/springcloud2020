@@ -1,9 +1,12 @@
 package com.atguigu.springcloud.service;
 
-        import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service;
 
-        import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;
 
+/**
+ * @author wuyz1
+ */
 @Service
 public class PaymentServiceImpl implements PaymentService {
 
@@ -20,6 +23,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     /**
      * 模拟超时异常
+     *
      * @param id
      * @return
      */

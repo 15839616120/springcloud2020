@@ -27,7 +27,7 @@ public class PaymentController {
      * @param id
      * @return
      */
-    @GetMapping("/payment/hystrix/ok/{id}")
+    @GetMapping(value = "/payment/hystrix/ok/{id}")
     public String paymentInfo(@PathVariable("id") Integer id){
         String result = paymentService.paymentInfo(id);
         log.info("*****result: "+result);
@@ -39,7 +39,7 @@ public class PaymentController {
      * @param id
      * @return
      */
-    @GetMapping("/payment/hystrix/error/{id}")
+    @GetMapping(value = "/payment/hystrix/error/{id}")
     public String paymentInfoError(@PathVariable("id") Integer id){
         String result = paymentService.paymentInfoError(id);
         log.info("*****result: "+result);
