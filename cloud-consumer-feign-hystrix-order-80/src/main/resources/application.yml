@@ -9,3 +9,12 @@ eureka:
       defaultZone: http://localhost:7001/eureka/
       #defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka #集群版
 
+feign:
+  hystrix:
+    enabled: true
+
+
+logging:
+  level:
+    #feign日志以什么级别监控那个接口
+    com.atguigu.springclud.service.PaymentFeignService: debug
