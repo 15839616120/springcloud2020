@@ -40,7 +40,7 @@ public class PaymentServiceImpl implements PaymentService {
         //int s = 10/0;
         try {
             //异常2
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(12);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
