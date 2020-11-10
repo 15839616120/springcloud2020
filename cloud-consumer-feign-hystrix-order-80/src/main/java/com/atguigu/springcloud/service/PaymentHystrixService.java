@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @author wuyz1
+ * fallback = PaymentFallbackService.class 是自定义的服务降级统一处理类
  */
 @Component
-@FeignClient(value = "cloud-provider-hystrix-payment")
+@FeignClient(value = "cloud-provider-hystrix-payment" ,fallback = PaymentFallbackService.class)
 public interface PaymentHystrixService {
 
 
