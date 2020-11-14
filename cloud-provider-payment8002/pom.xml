@@ -16,15 +16,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-           <!-- <version>1.4.200</version>-->
-            <!--<version>1.3.170</version>-->
-            <!--<version>1.2.131</version>-->
-            <!--<version>1.1.112</version>-->
-            <version>1.0.65</version>
-        </dependency>
+        <!--<dependency>
+          <groupId>com.h2database</groupId>
+           <artifactId>h2</artifactId>
+          &lt;!&ndash; <version>1.4.200</version>&ndash;&gt;
+           &lt;!&ndash;<version>1.3.170</version>&ndash;&gt;
+           &lt;!&ndash;<version>1.2.131</version>&ndash;&gt;
+           &lt;!&ndash;<version>1.1.112</version>&ndash;&gt;
+           <version>1.0.65</version>
+       </dependency>-->
         <!--eurekaclient  GAV坐标-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

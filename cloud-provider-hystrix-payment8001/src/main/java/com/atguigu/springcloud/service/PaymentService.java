@@ -5,4 +5,6 @@ public interface PaymentService {
     String paymentInfo(Integer id);
 
     String paymentInfoError(Integer id);
+
+    String paymentCircuitBreaker(Integer id);
 }
