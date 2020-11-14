@@ -4,13 +4,28 @@ server:
 spring:
   application:
     name: cloud-payment-service
-#这个地方刚开始顶格写了，报这个错误：Failed to determine a suitable driver class  解决方案  yml格式文件的写入 ：（等阶平齐）
+  # DataSource Config
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: root
+    driver-class-name: org.h2.Driver
+    schema: classpath:/db/schema.sql #，每次启动程序，程序都会运行schema.sql文件，对数据库的数据操作
+    data: classpath:/db/data.sql #，每次启动程序，程序都会运行data.sql文件，对数据库的数据操作
+    url: jdbc:h2:mem:test #配置h2数据库的连接地址
+    username: sa
+    password: sa
+    platform: h2 # 指定数据库的类型
+    initialization-mode: always
+  h2:
+    console:
+      enabled: true #开启web console功能
+      path: /h2-console # H2控制台的访问路径， 默认是/h2-console
+
+    #这个地方刚开始顶格写了，报这个错误：Failed to determine a suitable driver class  解决方案  yml格式文件的写入 ：（等阶平齐）
+    #datasource:
+    #type: com.alibaba.druid.pool.DruidDataSource
+    #driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    #username: root
+    #password: root
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -21,6 +21,8 @@
         <module>cloud-consumer-feign-order-80</module>
         <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-consumer-feign-hystrix-order-80</module>
+        <module>H2Demo</module>
+        <module>h2demo2</module>
     </modules>
 
 
@@ -44,7 +46,8 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.2.RELEASE</version>
+                <!--<version>2.2.2.RELEASE</version>-->
+                <version>2.1.18.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
