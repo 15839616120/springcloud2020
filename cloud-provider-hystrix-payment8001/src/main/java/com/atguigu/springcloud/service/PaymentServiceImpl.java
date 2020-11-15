@@ -77,6 +77,11 @@ public class PaymentServiceImpl implements PaymentService {
         return Thread.currentThread().getName()+"\t"+"调用成功，流水号： "+serialNumber;
     }
 
+    /**
+     * 截至到第59个视频，回头接着59继续整合
+     * @param id
+     * @return
+     */
     public String paymentCircuitBreaker_fallback(Integer id){
         return "id 不能为负数，请稍后再试  id: "+id;
     }
