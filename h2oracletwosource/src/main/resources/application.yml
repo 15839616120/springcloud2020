@@ -1,0 +1,38 @@
+server:
+  port: 9001
+
+
+spring:
+  dynamic:
+    datasource:
+      default-data-source: master
+      show-selected-source: true
+  h2:
+    console:
+      enabled: true
+
+master:
+  spring:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: root
+
+#slave:
+#  spring:
+#    datasource:
+#      driver-class-name: com.mysql.jdbc.Driver
+#      jdbc-url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#      username: root
+#      password: root
+slave:
+  spring:
+    datasource:
+      driver-class-name: org.h2.Driver
+#      schema: classpath:db/schema.sql #，每次启动程序，程序都会运行schema.sql文件，对数据库的数据操作
+#      data: classpath:db/data.sql #，每次启动程序，程序都会运行data.sql文件，对数据库的数据操作
+      jdbc-url: jdbc:h2:mem:test #配置h2数据库的连接地址
+      username: sa
+      password: sa
+

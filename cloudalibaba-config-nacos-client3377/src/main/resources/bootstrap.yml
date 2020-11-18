@@ -1,0 +1,22 @@
+server:
+  port: 3377 #本工程的端口
+
+spring:
+  application:
+    name: nacos-config-client   #本微服务名字 服务提供者的名字
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #nacos服务注册中心地址
+      config:
+        server-addr: localhost:8848 #nacos作为配置中心的地址
+        file-extension: yaml #指定yaml格式的配置
+        #group: TEST_GROUP   #nacos的分组名
+
+    #Data ID的规则
+#${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+# nacos-config-client-dev.yml  nacos配置中心目前存在一个小bug，只能写成yaml，不能简写成yml,
+    #不然会报：Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'config.info' in value "${config.info}"
+# nacos-config-client-dev.yaml
+
+# nacos-config-client-test.yaml
