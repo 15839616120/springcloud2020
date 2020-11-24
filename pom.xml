@@ -28,6 +28,8 @@
         <module>cloudalibaba-consumer-nacos-order-83</module>
         <module>cloudalibaba-config-nacos-client3377</module>
         <module>h2oracletwosource</module>
+        <module>standard</module>
+        <module>GlobalExceptionModel</module>
     </modules>
 
 
@@ -112,7 +114,6 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
-                <optional>true</optional>
             </dependency>
         </dependencies>
     </dependencyManagement>
