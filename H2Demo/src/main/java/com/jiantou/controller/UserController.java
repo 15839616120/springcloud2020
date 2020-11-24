@@ -14,7 +14,7 @@ public class UserController {
     private UserDao userDao;
 
     @RequestMapping("findById")
-    public User findById() {
+    public User xfindById() {
         System.out.println(userDao.findById(1));
         User user = userDao.findById(1);
         return user;
