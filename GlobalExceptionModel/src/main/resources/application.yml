@@ -1,5 +1,9 @@
 server:
-  port: 8001
+  port: 8080
 
 
 
+#slf4j日志级别配置
+logging:
+  level:
+    root: info

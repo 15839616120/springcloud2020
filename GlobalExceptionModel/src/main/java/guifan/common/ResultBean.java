@@ -32,4 +32,9 @@ public class ResultBean<T> implements Serializable {
     this.msg = businessEnum.getMsg();
     this.data = data;
   }
+
+  private ResultBean(Integer code, String msg) {
+    this.code = code;
+    this.msg = msg;
+  }
 }
